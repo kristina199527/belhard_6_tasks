@@ -20,3 +20,28 @@ school_data = {
     '2a': 13,
     '2b': 30
 }
+
+
+def incr_students(some_dict):
+    for i in some_dict.values():
+        i = i + 1
+    return incr_students
+
+
+incr_students_1 = incr_students(school_data)
+print(incr_students_1)
+
+
+def decr_students(some_dict):
+
+    for i in some_dict.values():
+        if i > 1:
+            i = i + 1
+        else:
+            i == i
+    return decr_students
+
+
+
+print(decr_students(school_data))
+
