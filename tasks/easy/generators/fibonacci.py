@@ -12,3 +12,15 @@ next(fibonacci_gen) -> 3
 next(fibonacci_gen) -> 5
 next(fibonacci_gen) -> 8
 """
+
+
+def fibonacci():
+
+    first = 1
+    second = 1
+    yield first
+    yield second
+
+    while True:
+        first, second = second, first + second
+        yield second

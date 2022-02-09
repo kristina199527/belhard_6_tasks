@@ -7,5 +7,13 @@ even_gen = get_even_number()
 
 next(even_gen) -> 2
 next(even_gen) -> 4
-next(even_gen) -> 6
+next(even_gen) ->
+
 """
+
+
+def get_even_number():
+    d = 2
+    while True:
+        yield d
+        d = d + 2
