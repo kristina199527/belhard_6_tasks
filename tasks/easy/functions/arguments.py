@@ -9,8 +9,8 @@
 https://pyneng.readthedocs.io/ru/latest/book/10_useful_functions/all_any.html
 
 Если все аргументы - ключевые слова являются строками, то найти максимальную
-длину слова. Если нет, то кинуть ошибку TypeError("Все аргументы - ключевые
-слова должны быть строками").
+длину слова. Если нет, то кинуть ошибку TypeError)("Все аргументы - ключевые
+слова должны быть строками".
 
 Функция должна вернуть словарь, вида:
 {
@@ -18,3 +18,16 @@ https://pyneng.readthedocs.io/ru/latest/book/10_useful_functions/all_any.html
     "kwargs_max_len": 7
 }
 """
+
+
+def dict_from_args(*args, **kwargs):
+    if all(isinstance(i, int) for i in args):
+        args_sum = sum(args)
+    else:
+        raise TypeError("Все позиционные аргументы должны быть целыми")
+
+    if all(isinstance(j, str) for j in kwargs.values()):
+        len_str = max(kwargs.values())
+    else:
+        raise TypeError("Все аргументы - ключевые слова должны быть строками")
+    return {"args_sum": args_sum, "kwargs_max_len": len(len_str)}

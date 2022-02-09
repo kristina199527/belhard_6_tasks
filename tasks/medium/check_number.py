@@ -20,4 +20,3 @@ def check_number(n):
 
 
 print(check_number(num))
-

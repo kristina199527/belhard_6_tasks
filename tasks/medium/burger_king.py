@@ -68,6 +68,7 @@ def tomato(func):
 def beef(n='### говядина ###'):
     print(n)
 
+
 print(beef())
 
 
@@ -99,5 +100,5 @@ def salad(func):
 def chicken(n='|||| курица ||||'):
     print(n)
 
-print(chicken())
 
+print(chicken())

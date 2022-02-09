@@ -10,11 +10,11 @@
 
 
 def log_decorator(func):
-    def wrapper():
-        print(f"Выполняем {hello} с args: {name} ")
-        result = func()
-        print(f'Выполнено {func(name)}')
-
+    def wrapper(*args, **kwargs):
+        print(f"Выполняем {func.__name__} с args: {args} и kwargs: {kwargs}")
+        result = func(*args, **kwargs)
+        print(f"Выполнено {func.__name__}")
+        return result
     return wrapper
 
 
@@ -23,4 +23,4 @@ def hello(name):
     print(f"Привет, {name}")
 
 
-hello("Christina")
+hello('Kristina')

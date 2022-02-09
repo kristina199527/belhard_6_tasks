@@ -19,16 +19,9 @@ next(tn_gen) -> 21
 """
 
 
-def triangular_numbers(n):
-    f = 1
-    for i in range(1, n):
-        f = int((i * (i + 1)) / 2)
-        yield f
+def triangular_numbers():
+    n = 1
+    while True:
 
-
-tn_gen = triangular_numbers(10)
-print(next(tn_gen))
-print(next(tn_gen))
-print(next(tn_gen))
-print(next(tn_gen))
-print(next(tn_gen))
+        yield 0.5 * n * (n + 1)
+        n = n + 1

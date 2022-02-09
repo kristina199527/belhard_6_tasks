@@ -14,22 +14,13 @@ next(fibonacci_gen) -> 8
 """
 
 
-def fibonacci(n):
-    if n < 0:
-        raise ValueError('Значение должно быть больше 0')
+def fibonacci():
+
     first = 1
     second = 1
     yield first
     yield second
 
-    for _ in range(n - 2):
+    while True:
         first, second = second, first + second
         yield second
-
-
-fibonacci_gen = fibonacci(12)
-print(next(fibonacci_gen))
-
-
-
-

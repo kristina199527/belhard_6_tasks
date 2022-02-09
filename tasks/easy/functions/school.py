@@ -5,7 +5,7 @@
 
 - Функция incr_students, которая принимает SCHOOL_DATA, название класса и
     увеличивает количество учеников на 1
-- Функция decr_students, которая принимает SCHOOL_DATA, название класса и
+- Функция incr_students, которая принимает SCHOOL_DATA, название класса и
     уменьшает количество учеников на 1, но не меньше 0
 - Функция add_class, которая принимает SCHOOL_DATA, название класса и добавляет
     класс в словарь с количеством учеников 0
@@ -22,26 +22,60 @@ school_data = {
 }
 
 
-def incr_students(some_dict):
-    for i in some_dict.values():
-        i = i + 1
-    return incr_students
+def calc_students(some_list):
+    result = sum(some_list.values())
+    return result
 
 
-incr_students_1 = incr_students(school_data)
-print(incr_students_1)
+def incr_students(some_list):
+    for i, j in some_list.items():
+        some_list[i] = j + 1
+    return some_list
 
 
-def decr_students(some_dict):
-
-    for i in some_dict.values():
-        if i > 1:
-            i = i + 1
-        else:
-            i == i
-    return decr_students
+school_data = {
+    '1a': 15,
+    '1b': 23,
+    '2a': 13,
+    '2b': 30
+}
 
 
+def incr_students_2(some_list):
+    for i, j in some_list.items():
+        some_list[i] = j - 1
+    return some_list
 
-print(decr_students(school_data))
 
+school_data = {
+    '1a': 15,
+    '1b': 23,
+    '2a': 13,
+    '2b': 30
+}
+
+
+def add_class(some_list):
+    some_list['3b'] = 0
+    return some_list
+
+
+school_data = {
+    '1a': 15,
+    '1b': 23,
+    '2a': 13,
+    '2b': 30
+}
+
+
+def remove_class(some_list):
+    some_list = some_list.pop('1a')
+    return some_list
+
+
+school_data = {
+    '1a': 15,
+    '1b': 23,
+    '2a': 13,
+    '2b': 30
+}

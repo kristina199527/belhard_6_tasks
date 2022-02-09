@@ -24,4 +24,3 @@ def count_char(n: list):
 
 
 print(count_char(STR_VAL))
-

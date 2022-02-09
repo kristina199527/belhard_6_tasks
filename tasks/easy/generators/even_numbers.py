@@ -11,15 +11,9 @@ next(even_gen) ->
 
 """
 
-a = 10
 
-
-def get_even_number(n):
-    for i in range(n):
-        if i % 2 == 0:
-            yield i
-
-
-even_gen = get_even_number(a)
-print(next(even_gen))
-
+def get_even_number():
+    d = 2
+    while True:
+        yield d
+        d = d + 2

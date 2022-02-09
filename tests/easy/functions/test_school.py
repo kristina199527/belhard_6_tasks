@@ -13,8 +13,8 @@ from tasks.easy.functions.school import (
 def school_data():
     return {
         "1a": 15,
-        "1b": 10,
-        "2a": 20,
+        "1b": 23,
+        "2a": 13,
         "2b": 30
     }
 
@@ -40,4 +40,4 @@ def test_remove_class(school_data):
 
 
 def test_calc_students(school_data):
-    assert calc_students(school_data) == 75
+    assert calc_students(school_data) == 81

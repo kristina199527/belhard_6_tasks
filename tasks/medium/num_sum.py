@@ -15,5 +15,3 @@ def sum_of_numbers(n):
 
 
 print(sum_of_numbers(num))
-
-
